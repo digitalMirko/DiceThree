@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
     // Field to hold the score
     int score;
 
+    // Field to hold random number generator
     Random rand;
+
+    // Field to hold the die value
+    int die1;
 
 
 
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         rollResult = (TextView) findViewById(R.id.rollResult);
         rollButton = (Button) findViewById(R.id.rollButton);
 
-        // Initialize the random number generator 
+        // Initialize the random number generator
         rand = new Random();
 
         // Create greeting
@@ -61,9 +65,22 @@ public class MainActivity extends AppCompatActivity {
     public void rollDice (View v) {
         rollResult.setText("Clicked");
 
-        int num = rand.nextInt(6)+1;
-        String randomValue = "Number generated: " + num;
-        Toast.makeText(getApplicationContext(),randomValue,Toast.LENGTH_SHORT).show();
+        // Roll dice
+        die1 = rand.nextInt(6)+1;
+
+        // Buold message with the result
+        String msg = "You rolled a " + die1;
+
+        // Update the app to display the result message
+        rollResult.setText(msg);
+
+
+
+
+        // Not needed any more
+//        int num = rand.nextInt(6)+1;
+//        String randomValue = "Number generated: " + num;
+//        Toast.makeText(getApplicationContext(),randomValue,Toast.LENGTH_SHORT).show();
     }
 
     @Override
