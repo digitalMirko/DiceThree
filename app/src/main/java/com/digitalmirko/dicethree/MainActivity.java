@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         rollResult = (TextView) findViewById(R.id.rollResult);
         rollButton = (Button) findViewById(R.id.rollButton);
 
-        // Initialize the random number generator
+        // Initialize the random number generator 
         rand = new Random();
 
         // Create greeting
