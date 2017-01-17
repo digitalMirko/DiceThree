@@ -7,7 +7,8 @@ Android Three Dice Game app
 This app shows you three red and white dice that change value when the blue die button is clicked.
 It randomly generates a number between 1 and 6 and changes the die value along with telling you what the value is up top and gives you your score based on the roll.
 
-The app launches and has a simple screen showing a title "DiceThree" in the top blue bar. 
+The app launches and a Toast message pops up from the bottom to welcome you to the game by saying "Welcome to DiceOut!"
+You will then notice the game title "DiceThree" in the top blue bar. 
 Right below is the label "Let's Play!". Then just below are three die's shown in the one position.
 Below is a starting "Score: 0" and a round button in the bottom of the right hand corner to roll the die.
 Click the die and see what you roll.
