@@ -14,6 +14,7 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/rollResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lets Play!" />
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:id="@+id/rollButton"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/rollResult"
+        android:onClick="rollDice"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
