@@ -61,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
         // Set initial score
         score = 0;
 
-
-
         rollResult = (TextView) findViewById(R.id.rollResult);
 //        rollButton = (Button) findViewById(R.id.rollButton);
         scoreText = (TextView) findViewById(R.id.scoreText);
