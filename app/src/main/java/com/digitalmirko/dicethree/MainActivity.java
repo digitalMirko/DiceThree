@@ -61,8 +61,12 @@ public class MainActivity extends AppCompatActivity {
         // Set initial score
         score = 0;
 
+        // Field to hold the score text
+        TextView scoreText;
+
         rollResult = (TextView) findViewById(R.id.rollResult);
         rollButton = (Button) findViewById(R.id.rollButton);
+        scoreText = (TextView) findViewById(R.id.scoreText);
 
         // Initialize the random number generator
         rand = new Random();
@@ -97,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
         dice.add(die1);
         dice.add(die2);
         dice.add(die3);
+
+
 
         for(int dieOfSet = 0; dieOfSet < 3; dieOfSet++){
             String imageName = "die_" + dice.get(dieOfSet) + ".png";
