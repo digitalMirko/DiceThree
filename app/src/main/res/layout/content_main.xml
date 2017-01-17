@@ -19,16 +19,6 @@
         android:layout_height="wrap_content"
         android:text="Lets Play!" />
 
-    <Button
-        android:text="Roll!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:id="@+id/rollButton"
-        android:layout_below="@+id/die2Image"
-        android:onClick="rollDice"
-        android:layout_centerHorizontal="true" />
-
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
