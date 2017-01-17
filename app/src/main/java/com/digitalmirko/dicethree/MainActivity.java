@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     // Field to hold the score
     int score;
 
+    // Field to hold the score text
+    TextView scoreText;
+
     // Field to hold random number generator
     Random rand;
 
@@ -61,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
         // Set initial score
         score = 0;
 
-        // Field to hold the score text
-        TextView scoreText;
+
 
         rollResult = (TextView) findViewById(R.id.rollResult);
         rollButton = (Button) findViewById(R.id.rollButton);
@@ -116,15 +118,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Rolled message with the result
-        String msg = "You rolled a " + die1 + ", a " + die2 + ", and a " + die3;
+//        String msg = "You rolled a " + die1 + ", a " + die2 + ", and a " + die3;
+        String msg;
 
-
+        if(die1 == die2 && die1 == die3){
+            // Scored Triples
+            int scoreDelta = die1 * 100;
+            msg = "You rolled a triple " + die1 +  "! Your score " + scoreDelta + " points";
+            score += scoreDelta;
+        } else if (die1 == die2 || die1 == die3 || die2 == die3){
+            // Scored Doubles
+            msg = "You rolled doubles for 50 points!";
+            score += 50;
+        } else {
+            msg = "You didn't score this roll. Try again!";
+        }
 
         // Update the app to display the result message
         rollResult.setText(msg);
-
-
-
+        scoreText.setText("Score: " + score);
 
         // Not needed any more
 //        int num = rand.nextInt(6)+1;
